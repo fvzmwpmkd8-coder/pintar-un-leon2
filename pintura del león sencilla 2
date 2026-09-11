@@ -1,0 +1,63 @@
+import turtle
+
+# Crear pantalla
+pantalla = turtle.Screen()
+pantalla.title("León 🦁")
+
+# Crear el pincel
+leon = turtle.Turtle()
+leon.speed(0)
+leon.pensize(3)
+
+# Cabeza
+leon.penup()
+leon.goto(0, -100)
+leon.pendown()
+leon.circle(100)
+
+# Melena
+leon.penup()
+leon.goto(0, 0)
+leon.pendown()
+
+for i in range(36):
+    leon.forward(130)
+    leon.backward(130)
+    leon.left(10)
+
+# Ojos
+leon.penup()
+leon.goto(-35, 30)
+leon.pendown()
+leon.dot(15)
+
+leon.penup()
+leon.goto(35, 30)
+leon.pendown()
+leon.dot(15)
+
+# Nariz
+leon.penup()
+leon.goto(0, 0)
+leon.pendown()
+leon.dot(20)
+
+# Boca
+leon.penup()
+leon.goto(0, 0)
+leon.setheading(-90)
+leon.pendown()
+leon.forward(35)
+
+leon.left(45)
+leon.forward(30)
+
+leon.backward(30)
+leon.right(90)
+leon.forward(30)
+
+# Ocultar pincel
+leon.hideturtle()
+
+# Mantener ventana abierta
+turtle.done()
